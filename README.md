@@ -1,2 +1,3 @@
-# angular-express-mysql-auth
-Authentication boilerplate built using Angular, Node/Express and MySQL
+# Angular Authentication Template
+
+Authentication boilerplate built using Angular and TypeScript
