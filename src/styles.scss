@@ -1,4 +1,22 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* the @tailwind base in the style.scss is modifying border-style of mat-form-field that material don't like. so to fix it add this:
+*/
+*,
+::before,
+::after {
+    border-style: none;
+}

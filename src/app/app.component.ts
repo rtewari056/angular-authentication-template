@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+import { ThemeService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +12,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-authentication-template';
+
+  protected readonly themeService = inject(ThemeService);
+
+  @HostBinding('class.dark') get mode() {
+    return this.themeService.isDarkMode();
+  }
 }

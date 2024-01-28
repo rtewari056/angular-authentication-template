@@ -1,4 +1,5 @@
 // Configuration for development build
 export const environment = {
-    production: false
+    production: false,
+    API_URL: 'http://localhost:5000'
 };
